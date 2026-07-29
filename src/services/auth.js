@@ -21,13 +21,13 @@ export const setSessionCookies = (res, session) => {
     maxAge: FIFTEEN_MINUTES,
   });
   res.cookie('refreshToken', session.refreshToken, {
-    hhtpOnly: true,
+    httpOnly: true,
     secure: true,
     sameSite: 'none',
     maxAge: ONE_DAY,
   });
   res.cookie('sessionId', session._id, {
-    hhtpOnly: true,
+    httpOnly: true,
     secure: true,
     sameSite: 'none',
     maxAge: ONE_DAY,
